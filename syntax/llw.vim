@@ -4,24 +4,24 @@ if exists("b:current_syntax")
   finish
 endif
 
-syn keyword lwlTodo contained TODO
-syn keyword lwlKey token error start preamble language import parameters arguments limit
-syn match lwlOper "[:\+\*\?\|\(\);=~$]"
-syn match lwlLComment "//.*$" contains=lwlTodo
-syn region lwlBComment start='/\*' end='\*/' contains=lwlTodo
-syn match lwlSema "#\d\+"
-syn match lwlConf "!\d\+"
-syn region lwlImpl start='{' end='}' contains=lwlImpl
-syn region lwlStr start='\'' end='\''
+syn keyword llwTodo contained TODO
+syn keyword llwKey token error start preamble language import parameters arguments limit
+syn match llwOper "[:\+\*\?\|\(\);=~$]"
+syn match llwLComment "//.*$" contains=llwTodo
+syn region llwBComment start='/\*' end='\*/' contains=llwTodo
+syn match llwSema "#\d\+"
+syn match llwConf "!\d\+"
+syn region llwImpl start='{' end='}' contains=llwImpl
+syn region llwStr start='\'' end='\''
 
 syn sync fromstart
 
-hi def link lwlImpl     PreProc
-hi def link lwlTodo     Todo
-hi def link lwlLComment Comment
-hi def link lwlBComment Comment
-hi def link lwlKey      Statement
-hi def link lwlOper     Statement
-hi def link lwlSema     Type
-hi def link lwlStr      String
-hi def link lwlConf     Constant
+hi def link llwImpl     PreProc
+hi def link llwTodo     Todo
+hi def link llwLComment Comment
+hi def link llwBComment Comment
+hi def link llwKey      Statement
+hi def link llwOper     Statement
+hi def link llwSema     Type
+hi def link llwStr      String
+hi def link llwConf     Constant
