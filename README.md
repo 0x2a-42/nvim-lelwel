@@ -1,6 +1,6 @@
 # nvim-lelwel
 
-Vim/Neovim syntax highlighting for lelwel.
+Vim/Neovim syntax highlighting for [lelwel](https://github.com/0x2a-42/lelwel).
 
 ## Installation
 
