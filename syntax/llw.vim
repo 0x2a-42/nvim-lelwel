@@ -5,7 +5,7 @@ if exists("b:current_syntax")
 endif
 
 syn keyword llwTodo contained TODO
-syn keyword llwKey token error start preamble language import parameters arguments limit
+syn keyword llwKey token error start preamble language parameters arguments limit
 syn match llwOper "[:\+\*\|\(\)\[\];=]"
 syn match llwLComment "//.*$" contains=llwTodo
 syn region llwBComment start='/\*' end='\*/' contains=llwTodo
