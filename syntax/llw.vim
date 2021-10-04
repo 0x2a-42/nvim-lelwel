@@ -13,7 +13,7 @@ syn match llwSema "#\d\+"
 syn match llwPred "?\d\+"
 syn match llwErr "!\d\+"
 syn region llwImpl start='{' end='}' contains=llwImpl
-syn region llwStr start='\'' end='\''
+syn region llwStr start='\'' end='\'\|\n'
 
 syn sync fromstart
 
