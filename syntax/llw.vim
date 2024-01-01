@@ -11,7 +11,7 @@ syn match llwLComment "//.*$" contains=llwTodo
 syn region llwBComment start='/\*' end='\*/' contains=llwTodo
 syn match llwSema "#\d\+"
 syn match llwPred "?\d\+"
-syn match llwErr "!\d\+"
+syn match llwErr "!\d*"
 syn region llwImpl start='{' end='}' contains=llwImpl
 syn region llwStr start='\'' end='\'\|\n'
 
