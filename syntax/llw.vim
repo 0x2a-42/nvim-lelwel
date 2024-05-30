@@ -5,25 +5,29 @@ if exists("b:current_syntax")
 endif
 
 syn keyword llwTodo contained TODO
-syn keyword llwKey token start parameters
-syn match llwOper "[:\+\*\|\(\)\[\];=]"
+syn keyword llwKey token start skip right
+syn match llwOper "[\+\*\|\(\)\[\];=]"
+syn match llwRule "[a-zA-Z][a-zA-Z_0-9]*[ \t\n\f]*:"
 syn match llwLComment "//.*$" contains=llwTodo
 syn region llwBComment start='/\*' end='\*/' contains=llwTodo
-syn match llwSema "#\d\+"
-syn match llwPred "?\d\+"
-syn match llwErr "!\d*"
-syn region llwImpl start='{' end='}' contains=llwImpl
+syn match llwSema "#[0-9]\+"
+syn match llwPred "?[0-9]\+"
+syn match llwMark "<[0-9]\+"
+syn match llwNode "[0-9]\+>[a-zA-Z][a-zA-Z_0-9]*"
+syn match llwBind "@\([a-zA-Z][a-zA-Z_0-9]*\)\?"
 syn region llwStr start='\'' end='\'\|\n'
 
 syn sync fromstart
 
-hi def link llwImpl     PreProc
 hi def link llwTodo     Todo
 hi def link llwLComment Comment
 hi def link llwBComment Comment
-hi def link llwKey      Statement
-hi def link llwOper     Statement
+hi def link llwKey      Keyword
+hi def link llwOper     Operator
+hi def link llwRule     Function
 hi def link llwStr      String
-hi def link llwSema     Type
-hi def link llwPred     Function
-hi def link llwErr      Constant
+hi def link llwSema     Statement
+hi def link llwPred     Boolean
+hi def link llwMark     Type
+hi def link llwNode     Type
+hi def link llwBind     PreProc
