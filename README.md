@@ -17,11 +17,4 @@ Plug 'neovim/nvim-lspconfig'
 ```
 
 ## Demo
-### Diagnostics
-![](https://raw.githubusercontent.com/0x2a-42/i/master/nvim-lelwel/diag.gif)
-### Hover
-![](https://raw.githubusercontent.com/0x2a-42/i/master/nvim-lelwel/hover.gif)
-### Goto Definition
-![](https://raw.githubusercontent.com/0x2a-42/i/master/nvim-lelwel/gotodef.gif)
-### Find References
-![](https://raw.githubusercontent.com/0x2a-42/i/master/nvim-lelwel/findref.gif)
+![](https://raw.githubusercontent.com/0x2a-42/i/master/nvim-lelwel/lsp.gif)
