@@ -7,14 +7,15 @@ endif
 syn keyword llwTodo contained TODO
 syn keyword llwKey token start skip right
 syn match llwOper "[\+\*\|\(\)\[\];=]"
-syn match llwRule "[a-zA-Z][a-zA-Z_0-9]*[ \t\n\f]*:"
+syn match llwRule "[a-zA-Z][a-zA-Z_0-9]*^\?[ \t\n\f]*:"
 syn match llwLComment "//.*$" contains=llwTodo
 syn region llwBComment start='/\*' end='\*/' contains=llwTodo
 syn match llwSema "#[0-9]\+"
 syn match llwPred "?[0-9]\+"
 syn match llwMark "<[0-9]\+"
-syn match llwNode "[0-9]\+>[a-zA-Z][a-zA-Z_0-9]*"
-syn match llwBind "@\([a-zA-Z][a-zA-Z_0-9]*\)\?"
+syn match llwNode "\([0-9]\+\)\?>\([a-zA-Z][a-zA-Z_0-9]*\)\?"
+syn match llwBind "@[a-zA-Z][a-zA-Z_0-9]*"
+syn match llwElision "\^"
 syn region llwStr start='\'' end='\'\|\n'
 
 syn sync fromstart
@@ -31,3 +32,4 @@ hi def link llwPred     Boolean
 hi def link llwMark     Type
 hi def link llwNode     Type
 hi def link llwBind     PreProc
+hi def link llwElision  Type
