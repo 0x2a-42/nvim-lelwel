@@ -16,7 +16,7 @@ syn match llwMark "<[0-9]\+"
 syn match llwNode "\([0-9]\+\)\?>\([a-zA-Z][a-zA-Z_0-9]*\)\?"
 syn match llwBind "@[a-zA-Z][a-zA-Z_0-9]*"
 syn match llwElision "\^"
-syn region llwStr start='\'' end='\'\|\n'
+syn region llwStr start='\'' end='\'\|\n' skip='\\\'\|\\\\'
 
 syn sync fromstart
 
