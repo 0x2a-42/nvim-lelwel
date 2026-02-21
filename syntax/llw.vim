@@ -5,7 +5,7 @@ if exists("b:current_syntax")
 endif
 
 syn keyword llwTodo contained TODO
-syn keyword llwKey token start skip right
+syn keyword llwKey token start skip right part
 syn match llwOper "[\+\*\|\(\)\[\];=/~]"
 syn match llwRule "[a-zA-Z][a-zA-Z_0-9]*^\?[ \t\n\f]*:"
 syn match llwLComment "//.*$" contains=llwTodo
